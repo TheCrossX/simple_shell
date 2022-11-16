@@ -1,25 +1,22 @@
 #include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
+
 
 /**
- * main - Prompts a user for input and capture with getline.
- *
- * Return: 0
+ * print_alphabet - Entry point
+ * Description - Print alphabet
+ * in lower case followed by \n
+ * Return: void
  */
-int main(void)
+
+void print_alphabet(void)
 {
-	size_t n = 3;
-	char *buffer = NULL;
-	pid_t pid;
+	char letter = 'a';
 
-	pid = getpid();
-	printf("$: ");
-	getline(&buffer, &n, stdin);
-	printf("your name %sBuffer has size of %ld\n", buffer, n);
-	printf("your pid is %u\n ", pid);
-
-	free(buffer);
-
-	return (0);
+	while (letter <= 'z')
+	{
+	putchar(letter);
+	letter++;
+	}
+	putchar('\n');
 }
+
