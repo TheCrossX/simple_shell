@@ -2,6 +2,11 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+/**
+ * main - Prompts a user for input and capture with getline.
+ *
+ * Return: 0
+ */
 int main(void)
 {
 	size_t n = 3;
